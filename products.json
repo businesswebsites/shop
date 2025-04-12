@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "name": "Kerzenhalter",
+            "price": "10.00",
+            "image": "/images/kerzenhalter.jpg"
+        },
+        {
+            "name": "Vase mit Kerze",
+            "price": "12.00",
+            "image": "/images/vase_mit_kerze_muster.jpg"
+        },
+        {
+            "name": "Teller",
+            "price": "7.00",
+            "image": "/images/teller.jpeg"
+        }
+    ]
+}
