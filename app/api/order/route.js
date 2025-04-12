@@ -74,7 +74,7 @@
 // }
 
 
-//app\api\order\[orderId]\route.js
+//app\api\order\route.js
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/dbConnect";
 import Order from "@/models/Order";

@@ -1,3 +1,4 @@
+//app\api\order\email\route.js
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/dbConnect";
 import Order from "@/models/Order";
