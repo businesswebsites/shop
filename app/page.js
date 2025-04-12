@@ -49,7 +49,7 @@ import Head from 'next/head';
 import ProductCard from '@/components/ProductCard';
 
 export default async function Home() {
-  const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
+  const BASE_URL = process.env.BASE_URL || 'https://dekolust.vercel.app/';
   const res = await fetch(`${BASE_URL}/api/products`, { next: { revalidate: 0 } });
   const products = await res.json();
 
