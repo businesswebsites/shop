@@ -12,7 +12,7 @@ export async function connectToDatabase() {
 
   try {
     await mongoose.connect(MONGO_URI, {
-      useNewUrlParser: true,
+      //useNewUrlParser: true,
       useUnifiedTopology: true,
     });
     console.log('Datenbank verbunden');
