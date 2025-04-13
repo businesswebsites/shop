@@ -111,7 +111,7 @@
 import { useState } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
-import { ShoppingCart, Star, Menu, X } from 'lucide-react';
+import { ShoppingCart, Star, Menu, X, UserRoundPen, House, LogOut } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -134,7 +134,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-3 flex justify-between ">
         {/* Logo */}
         <Link href="/" onClick={closeMobileMenu}>
           <span className="text-2xl font-bold text-pink-600 cursor-pointer">
@@ -221,21 +221,23 @@ export default function Navbar() {
             <NavigationMenuList className="flex flex-col space-y-2 px-4 py-3">
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition block">
-                    Home
+                  <Link href="/" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition flex flex-row items-center">
+                  <House size={24} />
+                    <span>Home</span>
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/user" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition block">
-                    Profil
+                  <Link href="/user" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition flex flex-row items-center justify-start text-left">
+                  <UserRoundPen size={24} />
+                    <span>Profil</span>
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/cart" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition flex items-center">
+                  <Link href="/cart" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition flex flex-row items-center justify-start text-left">
                     <ShoppingCart size={24} />
                     <span className="ml-2">Warenkorb</span>
                   </Link>
@@ -243,7 +245,7 @@ export default function Navbar() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/favorites" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition flex items-center">
+                  <Link href="/favorites" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition flex flex-row items-center justify-start text-left">
                     <Star size={24} />
                     <span className="ml-2">Favoriten</span>
                   </Link>
@@ -252,21 +254,23 @@ export default function Navbar() {
               {!session ? (
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
-                    <Link href="/login" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition block">
-                      Login
+                    <Link href="/login" onClick={closeMobileMenu} className="text-gray-700 hover:text-pink-500 transition justify-start text-left">
+                      <LogOut size={24} />
+                      <span>Login</span>
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ) : (
-                <NavigationMenuItem>
+                <NavigationMenuItem>                  
                   <Button
                     variant="ghost"
                     onClick={() => {
                       signOut({ callbackUrl: "/login" });
                       closeMobileMenu();
                     }}
-                    className="text-gray-700 hover:text-red-500 transition w-full text-left"
+                    className="text-gray-700 hover:text-red-500 transition w-fulljustify-start text-left"
                   >
+                    <LogOut size={24} />
                     Logout
                   </Button>
                 </NavigationMenuItem>
