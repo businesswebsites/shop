@@ -14,6 +14,36 @@
             "name": "Teller",
             "price": "7.00",
             "image": "/images/teller.jpeg"
+        },
+        {
+            "name": "Blumentopf-Mädchen",
+            "price": "10.00",
+            "image": "/images/flower_girl_1.jpg"
+        },
+        {
+            "name": "Teelichthalter",
+            "price": "3.00",
+            "image": "/images/teelichthalter.JPG"
+        },
+        {
+            "name": "Teelichthalter klein",
+            "price": "7.00",
+            "image": "/images/minihalter.jpeg"
+        },
+        {
+            "name": "Familie",
+            "price": "10.00",
+            "image": "/images/menschen.jpg"
+        },
+        {
+            "name": "Kerzen mit Aufdruck",
+            "price": "12.00",
+            "image": "/images/kerzen.JPG"
+        },
+        {
+            "name": "Frau",
+            "price": "7.00",
+            "image": "/images/frau.JPG"
         }
     ]
 }

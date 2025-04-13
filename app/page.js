@@ -47,6 +47,7 @@
 // app/page.js
 import Head from 'next/head';
 import ProductCard from '@/components/ProductCard';
+import ProductList from '@/components/ProductList';
 
 export default async function Home() {
   const BASE_URL = process.env.BASE_URL || 'https://dekolust.vercel.app/';
@@ -79,12 +80,13 @@ export default async function Home() {
       {/* Produktübersicht */}
       <section className="py-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {products.map((product, index) => (
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> */}
+            {/* {products.map((product, index) => (
               <ProductCard key={index} product={product} />
-            ))}
+            ))} */}
+            <ProductList products={products} />
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </>
   );
