@@ -39,7 +39,7 @@ import Footer from '@/components/Footer';
 import { Toaster } from '@/components/Toaster';
 
 export const metadata = {
-  title: 'Shop Homepage - Dekolust',
+  title: 'Dekolust',
   description: 'Der Ort, wo du deine Wunschdeko findest!',
 };
 
