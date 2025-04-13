@@ -3,7 +3,7 @@
 import { useSession } from 'next-auth/react';
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
-import { ShoppingCart } from 'lucide-react';  // Importiere das Cart-Icon
+import { ShoppingCart, Star } from 'lucide-react';  // Importiere das Cart-Icon
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -48,6 +48,14 @@ export default function Navbar() {
               <NavigationMenuLink asChild>
                 <Link href="/cart" className="text-gray-700 hover:text-pink-500 transition flex items-center">
                   <ShoppingCart size={24} />
+                  {/* Du kannst hier auch eine Badge mit der Anzahl der Artikel anzeigen */}
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link href="/favorites" className="text-gray-700 hover:text-pink-500 transition flex items-center">
+                  <Star size={24} />
                   {/* Du kannst hier auch eine Badge mit der Anzahl der Artikel anzeigen */}
                 </Link>
               </NavigationMenuLink>
